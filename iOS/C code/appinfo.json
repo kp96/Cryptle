@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "s.suryakarthi@yahoo.com",
+    "longName": "optisol",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "optisol",
+    "uuid": "3c74cf8f-74e5-4975-8ad5-e4b25beea86f",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}

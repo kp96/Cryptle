@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oSa-9H-CGn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptleIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Cryptel-->
+        <scene sceneID="ybW-th-h6d">
+            <objects>
+                <tableViewController id="VNN-Gx-GKw" customClass="CryptHomeViewController" customModule="CryptleIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bb7-Ks-08D">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="l0J-Nt-F5x" customClass="CryptTableViewCell" customModule="CryptleIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l0J-Nt-F5x" id="ZQw-oh-ZCp">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBB-87-Elm">
+                                            <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Gcf-BE-Hh5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSV-zd-kd5">
+                                            <rect key="frame" x="125" y="29" width="220" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="220" id="b9v-ZH-5UV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aBB-87-Elm" firstAttribute="top" secondItem="ZQw-oh-ZCp" secondAttribute="topMargin" id="3hb-fK-pN7"/>
+                                        <constraint firstItem="tSV-zd-kd5" firstAttribute="leading" secondItem="aBB-87-Elm" secondAttribute="trailing" constant="57" id="Ml4-As-ZcO"/>
+                                        <constraint firstItem="tSV-zd-kd5" firstAttribute="centerY" secondItem="ZQw-oh-ZCp" secondAttribute="centerY" id="OhK-KF-CHZ"/>
+                                        <constraint firstItem="aBB-87-Elm" firstAttribute="leading" secondItem="ZQw-oh-ZCp" secondAttribute="leadingMargin" id="opE-gu-qtp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aBB-87-Elm" secondAttribute="bottom" constant="3" id="wrZ-bm-nQW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="tSV-zd-kd5" id="IkR-hX-Gdm"/>
+                                    <outlet property="thumbnailImageView" destination="aBB-87-Elm" id="Nw8-Jz-WVZ"/>
+                                    <segue destination="cA7-t2-aMj" kind="showDetail" identifier="showDetail" id="WPR-jU-3jx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VNN-Gx-GKw" id="8pB-Gr-sbv"/>
+                            <outlet property="delegate" destination="VNN-Gx-GKw" id="eOx-2S-wBj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cryptel" id="oLb-7g-TwT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bh-3M-Ysz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="350"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="kWE-pd-mnX">
+            <objects>
+                <viewController id="cA7-t2-aMj" customClass="DetailViewController" customModule="CryptleIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UZa-s4-U2m"/>
+                        <viewControllerLayoutGuide type="bottom" id="0FI-Zu-DOv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kyl-pJ-1QJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VM-xU-5Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433" y="350"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gZX-M6-N4v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oSa-9H-CGn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="izS-hz-r7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VNN-Gx-GKw" kind="relationship" relationship="rootViewController" id="CVj-gX-MwZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwZ-3A-LAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="350"/>
+        </scene>
+    </scenes>
+</document>
